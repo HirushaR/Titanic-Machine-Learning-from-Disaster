@@ -22,5 +22,8 @@ for x in [1,2,3]:
 plt.title('class wrt Age')
 plt.legend(("1st", "2nd", "3rd"))
 
+plt.subplot2grid((2,3),(1,2))
+df.Embarked.value_counts(normalize=True).plot(kind='bar',alpha=0.5)
+plt.title('Embarked')
 
 plt.show()
