@@ -11,4 +11,9 @@ plt.title('Survived')
 plt.subplot2grid((2,3),(0,1))
 plt.scatter(df.Survived, df.Age, alpha=0.1)
 plt.title('Age wrt Survived')
+
+plt.subplot2grid((2,3),(0,2))
+df.Pclass.value_counts(normalize=True).plot(kind='bar',alpha=0.5)
+plt.title('PClass')
+
 plt.show()
