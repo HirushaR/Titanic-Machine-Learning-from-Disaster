@@ -18,4 +18,8 @@ plt.subplot2grid((3,4),(0,2))
 df.Survived[df.Sex == "female"].value_counts(normalize=True).plot(kind='bar',alpha=0.5, color=female_color)
 plt.title('Women Survived')
 
+plt.subplot2grid((3,4),(0,3))
+df.Sex[df.Survived == 1].value_counts(normalize=True).plot(kind='bar',alpha=0.5, color=female_color)
+plt.title('Sex of Survived')
+
 plt.show()
