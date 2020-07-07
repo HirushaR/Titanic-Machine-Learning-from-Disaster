@@ -6,7 +6,8 @@ train = pd.read_csv('data/train.csv')
 utils.clean_data(train)
 
 target = train["Survived"].values
-features = train[["Pclass","Age","Sex","Fare", "Embarked","SibSp","Parch"]].values
+features_names = ["Pclass","Age","Sex","Fare", "Embarked","SibSp","Parch"]
+features = train[features_names].values
 
 classifier = linear_model.LogisticRegression()
 classifier_ = classifier.fit(features, target)
