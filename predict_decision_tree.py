@@ -30,3 +30,7 @@ print(generalize_tree.score(features, target))
 score = model_selection.cross_val_score(generalize_tree, features, target, scoring='accuracy', cv=50)
 print(score)
 print(score.mean())
+
+print("===========")
+
+tree.export_graphviz(generalize_tree, feature_names=features_names, out_file="tree.dot")
